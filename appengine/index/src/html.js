@@ -41,7 +41,7 @@ Index.html.start = function(ij) {
         ${ij.rtl ? 'transform="translate(100) scale(-1, 1)"' : ''}
       />
     </svg>
-    ${Index.html.appLink_(ij, 'puzzle', 10, 15, 'Games.puzzle')}
+    ${Index.html.appLink_(ij, 'puzzle', 0, 15, 'Games.puzzle')}
     ${Index.html.appLink_(ij, 'maze', 16, 45, 'Games.maze')}
     ${Index.html.appLink_(ij, 'bird', 26, 69, 'Games.bird')}
     ${Index.html.appLink_(ij, 'turtle', 41, 80, 'Games.turtle')}
