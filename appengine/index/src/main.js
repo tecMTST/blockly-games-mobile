@@ -19,7 +19,7 @@ goog.require('Index.html');
  * Array of application names.
  */
 const APPS = ['puzzle', 'maze', 'bird', 'turtle', 'movie', 'music',
-              'pond-tutor', 'pond-duck'];
+  'pond-tutor', 'pond-duck'];
 
 /**
  * Render the page and load any progress data.  Called on page load.
@@ -27,9 +27,11 @@ const APPS = ['puzzle', 'maze', 'bird', 'turtle', 'movie', 'music',
 function init() {
   // Render the HTML.
   document.body.innerHTML = Index.html.start(
-    {lang: BlocklyGames.LANG,
-     html: BlocklyGames.IS_HTML,
-     rtl: BlocklyGames.IS_RTL});
+    {
+      lang: BlocklyGames.LANG,
+      html: BlocklyGames.IS_HTML,
+      rtl: BlocklyGames.IS_RTL
+    });
 
   BlocklyGames.init('');
 
@@ -100,8 +102,11 @@ function drawGauge(app, angle) {
   const mx = xOffset - Math.cos(theta1) * radius;
   const my = yOffset - Math.sin(theta1) * radius;
   const path = BlocklyGames.getElementById('gauge-' + app);
+  const mobilePath = BlocklyGames.getElementById('mobile-gauge-' + app);
   path.setAttribute('d',
-      ['M', mx, my, 'A', radius, radius, 0, flag, 1, x, y].join(' '));
+    ['M', mx, my, 'A', radius, radius, 0, flag, 1, x, y].join(' '));
+  mobilePath.setAttribute('d',
+    ['M', mx - 50, my, 'A', radius, radius, 0, flag, 1, x - 50, y].join(' '));
 }
 
 /**
