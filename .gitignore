@@ -6,6 +6,8 @@ appengine/*/generated/
 appengine/*/*/generated/
 appengine/third-party/
 build/third-party-downloads/
+/ace-builds
+/SoundJS
 /offline
 /node_modules
 .idea
