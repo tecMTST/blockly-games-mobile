@@ -17,6 +17,7 @@ goog.require('BlocklyGames');
 let isMobileScreen = window.matchMedia("(max-width: 800px");
 
 const getMediaQueryContent = (e) => {
+  console.log(e.matches)
   if (e.matches) {
     document.getElementById("desktop").classList.add("hidden");
     document.getElementById("mobile").classList.remove("hidden");
